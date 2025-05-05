@@ -1,0 +1,197 @@
+/* Typography */
+h1, h2, h3 {
+  text-align: center;
+  margin: 8px 0;
+  color: #444;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 4px 0;
+}/* Global styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb); /* soft pink gradient */
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Flex container */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 30px 0 30px;
+}
+
+/* App header area */
+.app-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Base card styles */
+.card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Left map card - larger */
+.map-card {
+  flex: 1.8 1 450px;
+  max-width: 750px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Right prediction card - smaller */
+.prediction-card {
+  flex: 1 1 300px;
+  max-width: 600px;
+  min-height: 420px;
+}
+
+/* Static map image */
+.map-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s;
+}
+
+.map-image:hover {
+  transform: scale(1.02);
+}
+
+/* Add main app title */
+.app-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 10px 0 20px;
+  color: #6b112b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+  width: 100%;
+  position: relative;
+  top: 15px;
+}
+
+/* File input */
+input[type="file"] {
+  display: block;
+  margin: 12px auto;
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Image preview */
+.preview-container {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 450px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+.preview-image:hover {
+  transform: scale(1.03);
+}
+
+/* Button styling */
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Predict Button: Light Salmon to Light Pink */
+button:nth-child(1) {
+  background: linear-gradient(to right, #f78ca0, #f9748f);
+  color: #fff;
+}
+
+/* Clear Button: Light Blue to Lavender */
+.clear-button {
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  color: #444;
+}
+
+/* Prediction results */
+.results {
+  margin-top: 12px;
+  font-size: 16px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.85));
+  padding: 10px;
+  border-radius: 10px;
+  color: #444;
+  height: auto;
+  min-height: 100px;
+  overflow: visible;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+}
